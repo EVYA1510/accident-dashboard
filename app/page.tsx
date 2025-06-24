@@ -181,7 +181,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-2">מיקום: תל אביב</p>
-              <p className="text-gray-600 mb-2">דווח ע&quot;י: יוסי כהן</p>
+              דווח ע&quot;י: יוסי כהן
               <Link href="/reports" className="text-blue-700 hover:underline">
                 לצפייה בפרטים
               </Link>
