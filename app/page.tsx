@@ -181,7 +181,8 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-2">מיקום: תל אביב</p>
-              דווח ע&quot;י: יוסי כהן
+
+              <p className="text-gray-600 mb-2">דווח ע&quot;י: יוסי כהן</p>
               <Link href="/reports" className="text-blue-700 hover:underline">
                 לצפייה בפרטים
               </Link>
@@ -193,8 +194,9 @@ export default function Home() {
               <CardTitle>כשל במערכת חשמל</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 mb-2">מיקום: אשדוד</p>
-              <p className="text-gray-600 mb-2">דווח ע&quot;י: מירי לוי</p>
+              <p className="text-gray-600 mb-2">מיקום: אשדוד</p>ֿ
+              <p className="text-gray-600 mb-2">דווח ע&quot;י: מירי לוי</p>; [{" "}
+              <p className="text-gray-600 mb-2">דווח ע&quot;י: מירי לוי</p>]{" "}
               <Link href="/reports" className="text-blue-700 hover:underline">
                 לצפייה בפרטים
               </Link>
