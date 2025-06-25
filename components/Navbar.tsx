@@ -3,6 +3,7 @@
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -17,14 +18,11 @@ export default function Navbar() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button
-                variant="outline"
-                className="text-white border-white"
-                size="icon"
-              >
-                ☰
+              <Button variant="ghost" className="text-white" size="icon">
+                <Menu size={24} />
               </Button>
             </SheetTrigger>
+
             <SheetContent side="left" className="bg-blue-700 text-white p-4">
               <nav className="flex flex-col gap-4 mt-6">
                 <Link href="/" className="hover:underline">
