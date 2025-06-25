@@ -9,6 +9,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import { List } from "lucide-react";
 
 export default function ReportsPageClient() {
   const searchParams = useSearchParams();
@@ -56,7 +57,10 @@ export default function ReportsPageClient() {
 
   return (
     <section className="space-y-6 max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl font-bold text-blue-800">רשימת דיווחים</h1>
+      <h1 className="text-3xl font-bold text-primary flex items-center gap-2">
+        <List size={24} />
+        רשימת דיווחים
+      </h1>
 
       <div className="max-w-xs">
         <Select
@@ -76,12 +80,12 @@ export default function ReportsPageClient() {
         </Select>
       </div>
 
-      <p className="text-gray-700">
+      <p className="text-textSecondary">
         מציג כעת דיווחים עבור:{" "}
-        <span className="font-bold text-blue-700">{selectedDepartment}</span>
+        <span className="font-bold text-primary">{selectedDepartment}</span>
       </p>
 
-      {/* כאן נטען את קומפוננטת התצוגה בהתאם למחלקה */}
+      {/* כאן תוכל להוסיף קומפוננטה שמציגה את הדיווחים בפועל */}
     </section>
   );
 }

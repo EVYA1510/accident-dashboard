@@ -51,37 +51,39 @@ export default function AccidentForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-4 max-w-3xl mx-auto bg-white p-6 shadow rounded"
+      className="space-y-6 max-w-3xl mx-auto bg-white p-6 shadow-md rounded-xl"
     >
-      <h2 className="text-2xl font-bold text-blue-700">טופס דיווח תאונה</h2>
+      <h2 className="text-2xl font-bold text-primary mb-4">טופס דיווח תאונה</h2>
 
-      <div>
-        <Label>כותרת *</Label>
-        <Input
-          name="title"
-          value={formData.title}
-          onChange={handleChange}
-          required
-        />
-      </div>
+      <div className="space-y-4">
+        <div>
+          <Label>כותרת *</Label>
+          <Input
+            name="title"
+            value={formData.title}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div>
-        <Label>תאריך ושעה</Label>
-        <Input
-          type="datetime-local"
-          name="reportDate"
-          value={formData.reportDate}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <Label>תאריך ושעה</Label>
+          <Input
+            type="datetime-local"
+            name="reportDate"
+            value={formData.reportDate}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label>תוכן ההודעה</Label>
-        <Textarea
-          name="content"
-          value={formData.content}
-          onChange={handleChange}
-        />
+        <div>
+          <Label>תוכן ההודעה</Label>
+          <Textarea
+            name="content"
+            value={formData.content}
+            onChange={handleChange}
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -103,54 +105,60 @@ export default function AccidentForm() {
         </div>
       </div>
 
-      <div>
-        <Label>התקבל מגוף</Label>
-        <Input
-          name="sourceOrganization"
-          value={formData.sourceOrganization}
-          onChange={handleChange}
-        />
-      </div>
+      <div className="space-y-4">
+        <div>
+          <Label>התקבל מגוף</Label>
+          <Input
+            name="sourceOrganization"
+            value={formData.sourceOrganization}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label>איש קשר בגוף</Label>
-        <Input
-          name="sourceContact"
-          value={formData.sourceContact}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <Label>איש קשר בגוף</Label>
+          <Input
+            name="sourceContact"
+            value={formData.sourceContact}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label>אופן קבלה</Label>
-        <Input
-          name="receptionMethod"
-          value={formData.receptionMethod}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <Label>אופן קבלה</Label>
+          <Input
+            name="receptionMethod"
+            value={formData.receptionMethod}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label>הערות</Label>
-        <Textarea name="notes" value={formData.notes} onChange={handleChange} />
-      </div>
+        <div>
+          <Label>הערות</Label>
+          <Textarea
+            name="notes"
+            value={formData.notes}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label>גורם אחראי</Label>
-        <Input
-          name="responsibleEntity"
-          value={formData.responsibleEntity}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <Label>גורם אחראי</Label>
+          <Input
+            name="responsibleEntity"
+            value={formData.responsibleEntity}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <Label>אופן העברה</Label>
-        <Input
-          name="transferMethod"
-          value={formData.transferMethod}
-          onChange={handleChange}
-        />
+        <div>
+          <Label>אופן העברה</Label>
+          <Input
+            name="transferMethod"
+            value={formData.transferMethod}
+            onChange={handleChange}
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -245,11 +253,16 @@ export default function AccidentForm() {
               setFormData((prev) => ({ ...prev, tagav: !!checked }))
             }
           />
-          <Label>תג&quot;ב (מערכת משימות)</Label>
+          <Label>תג"ב (מערכת משימות)</Label>
         </div>
       </div>
 
-      <Button type="submit">שלח דיווח</Button>
+      <Button
+        type="submit"
+        className="bg-primary hover:bg-primaryDark text-white w-full"
+      >
+        שלח דיווח
+      </Button>
     </form>
   );
 }
