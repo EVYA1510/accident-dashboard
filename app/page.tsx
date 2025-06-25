@@ -107,6 +107,7 @@ export default function Home() {
               סה&quot;כ דיווחים
             </CardTitle>
           </CardHeader>
+
           <CardContent>
             <p className="text-3xl font-bold text-blue-700">{totalReports}</p>
           </CardContent>
@@ -166,56 +167,6 @@ export default function Home() {
             </Link>
           </CardContent>
         </Card>
-      </div>
-
-      {/* דיווחים אחרונים */}
-      <div className="space-y-4 mt-8">
-        <h2 className="text-2xl font-bold text-blue-700 text-center">
-          דיווחים אחרונים
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <Card className="hover:shadow transition">
-            <CardHeader>
-              <CardTitle>תאונה באתר בנייה</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">מיקום: תל אביב</p>
-
-              <p className="text-gray-600 mb-2">דווח ע&quot;י: יוסי כהן</p>
-              <Link href="/reports" className="text-blue-700 hover:underline">
-                לצפייה בפרטים
-              </Link>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow transition">
-            <CardHeader>
-              <CardTitle>כשל במערכת חשמל</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">מיקום: אשדוד</p>ֿ
-              <p className="text-gray-600 mb-2">דווח ע&quot;י: מירי לוי</p>; [{" "}
-              <p className="text-gray-600 mb-2">דווח ע&quot;י: מירי לוי</p>]{" "}
-              <Link href="/reports" className="text-blue-700 hover:underline">
-                לצפייה בפרטים
-              </Link>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow transition">
-            <CardHeader>
-              <CardTitle>פציעה קלה במפעל</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-2">מיקום: חיפה</p>
-              <p className="text-gray-600 mb-2">דווח ע&quot;י: רועי ישראלי</p>
-              <Link href="/reports" className="text-blue-700 hover:underline">
-                לצפייה בפרטים
-              </Link>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
